@@ -1,12 +1,10 @@
-from dotenv import load_dotenv
 import os
 import requests
 import datetime
 
-load_dotenv()
 
 # Replace with your Lichess API token
-API_TOKEN = os.getenv("API_TOKEN")
+API_TOKEN = os.environ["API_TOKEN"]
 
 
 def main(context):
