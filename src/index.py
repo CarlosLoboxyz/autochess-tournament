@@ -7,7 +7,7 @@ import datetime
 API_TOKEN = os.environ["API_TOKEN"]
 
 
-def main(context):
+def main(req, res):
     # Get the current date and time in the server location
     now = datetime.datetime.now()
 
@@ -40,7 +40,7 @@ def main(context):
     if response.status_code == 200:
         tournament_id = response.json().get("id")
         tournament_url = f"https://lichess.org/tournament/{tournament_id}"
-        return tournament_url
+        return res.json({"tournament_url": tournament_url})
     else:
         print("Failed to create tournament.")
         print("Response:", response.text)
