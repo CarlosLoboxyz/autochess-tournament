@@ -9,7 +9,7 @@ load_dotenv()
 API_TOKEN = os.getenv("API_TOKEN")
 
 
-def create_tournament():
+def main():
     # Get the current date and time in the server location
     now = datetime.datetime.now()
 
@@ -47,9 +47,3 @@ def create_tournament():
         print("Failed to create tournament.")
         print("Response:", response.text)
         return None
-
-
-if __name__ == "__main__":
-    tournament_url = create_tournament()
-    if tournament_url:
-        print(f"The tournament can be accessed at: {tournament_url}")
