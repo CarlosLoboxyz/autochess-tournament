@@ -9,7 +9,7 @@ load_dotenv()
 API_TOKEN = os.getenv("API_TOKEN")
 
 
-def main():
+def main(context):
     # Get the current date and time in the server location
     now = datetime.datetime.now()
 
