@@ -7,7 +7,7 @@ import datetime
 API_TOKEN = os.environ["API_TOKEN"]
 
 
-def main():
+def main(context):
     # Get the current date and time in the server location
     now = datetime.datetime.now()
 
